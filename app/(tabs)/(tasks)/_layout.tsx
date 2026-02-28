@@ -14,7 +14,7 @@ export default function Layout() {
       }}
     >
       <Stack.Screen name="index" />
-      <Stack.Screen name="daily-tasks" />
+      <Stack.Screen name="day-tasks/[date]" />
     </Stack>
   );
 }
