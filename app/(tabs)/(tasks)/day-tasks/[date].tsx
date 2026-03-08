@@ -4,7 +4,7 @@ import TaskCard from '@/components/task-card';
 import ViewContainer from '@/components/view-container';
 import { useUpdateTaskStatus, useWeekTasks } from '@/hooks';
 import { useWeekStore } from '@/store';
-import { format } from 'date-fns';
+import { format, isSameDay } from 'date-fns';
 import { useLocalSearchParams } from 'expo-router';
 import { useMemo } from 'react';
 import { Text } from 'react-native';
@@ -18,10 +18,12 @@ export default function DayTasksScreen() {
   const { mutate: switchStatus } = useUpdateTaskStatus(selectedWeek!.start, selectedWeek!.end);
 
   const { activeTasks, completedTasks, sortedTasks } = useMemo(() => {
-    const filtered = weeksTasks.filter((task) => task.date === date);
+    const filtered = weeksTasks.filter((task) => isSameDay(task.scheduledAt, new Date(date)));
+
     const activeTasks = filtered
       .filter((t) => !t.completed)
-      .sort((a, b) => a.time.localeCompare(b.time));
+      .sort((a, b) => new Date(a.scheduledAt).getTime() - new Date(b.scheduledAt).getTime());
+
     const completedTasks = filtered.filter((t) => t.completed);
     return {
       activeTasks,

@@ -1,5 +1,6 @@
 import { ITask } from '@/types/interfaces';
 import { cn } from '@/utilities';
+import { format } from 'date-fns';
 import { Pressable, Text, View } from 'react-native';
 import Checkbox from './ui/checkbox';
 
@@ -40,7 +41,7 @@ export default function TaskCard({ item, onSwitchTaskStatus }: ITaskCardProps) {
               item.completed && 'text-gray-600 line-through',
             )}
           >
-            В {item.time.toString() + '. '}
+            В {format(item.scheduledAt, 'HH:mm') + '. '}
             {item.description && item.description}
           </Text>
         </View>

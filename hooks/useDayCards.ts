@@ -7,7 +7,7 @@ export const useDayCards = (selectedWeek: SelectedWeek, tasks: ITask[]) => {
   if (!selectedWeek) return [];
 
   const dayCards = selectedWeek.days.map((day) => {
-    const dayTasks = tasks.filter((t) => isSameDay(new Date(t.date), day));
+    const dayTasks = tasks.filter((t) => isSameDay(new Date(t.scheduledAt), day));
 
     const total = dayTasks.length;
     const completed = dayTasks.filter((t) => t.completed).length;
