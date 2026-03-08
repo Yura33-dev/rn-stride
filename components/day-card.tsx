@@ -37,7 +37,7 @@ export default function DayCard({ item, today }: IDayCardProps) {
       }}
       onPress={() =>
         router.navigate({
-          pathname: '/(tabs)/(tasks)/day-tasks/[date]',
+          pathname: '/(tabs)/(tasks)/tasks',
           params: { date: format(item.date, 'yyyy-MM-dd') },
         })
       }

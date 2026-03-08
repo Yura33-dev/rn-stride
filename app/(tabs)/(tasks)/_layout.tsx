@@ -17,7 +17,8 @@ export default function Layout() {
         }}
       >
         <Stack.Screen name="index" />
-        <Stack.Screen name="day-tasks/[date]" />
+        <Stack.Screen name="tasks/index" />
+
         <Stack.Screen
           name="modal-calendar"
           options={{
