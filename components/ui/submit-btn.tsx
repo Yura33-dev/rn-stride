@@ -1,6 +1,6 @@
 import Colors from '@/constants/Colors';
 import { cn } from '@/utilities';
-import { Pressable, Text } from 'react-native';
+import { ActivityIndicator, Pressable, Text } from 'react-native';
 import Animated, {
   interpolate,
   interpolateColor,
@@ -9,16 +9,25 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 
-interface ISaveButtonProps {
+interface ISubmitButtonProps {
+  onPress: () => void;
   title?: string;
   className?: string;
   textClassName?: string;
-  onPress: () => void;
+  isSubmitting?: boolean;
+  disabled?: boolean;
 }
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
-export default function SaveButton({ title, className, textClassName, onPress }: ISaveButtonProps) {
+export default function SubmitButton({
+  title,
+  className,
+  textClassName,
+  onPress,
+  isSubmitting = false,
+  disabled = false,
+}: ISubmitButtonProps) {
   const pressed = useSharedValue(0);
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -37,8 +46,13 @@ export default function SaveButton({ title, className, textClassName, onPress }:
       onPressOut={() => {
         pressed.value = withSpring(0);
       }}
+      disabled={disabled}
     >
-      <Text className={textClassName && textClassName}>{title ? title : 'Save'}</Text>
+      {isSubmitting ? (
+        <ActivityIndicator color="white" />
+      ) : (
+        <Text className={textClassName && textClassName}>{title ? title : 'Save'}</Text>
+      )}
     </AnimatedPressable>
   );
 }
