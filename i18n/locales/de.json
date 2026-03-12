@@ -99,5 +99,41 @@
       "on_completing_done": "Aufgabe erledigt!",
       "on_log_out": "Erfolgreich abgemeldet"
     }
+  },
+  "auth_validating": {
+    "email": {
+      "required": "E-Mail ist erforderlich",
+      "invalid": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "tooLong": "E-Mail darf 100 Zeichen nicht überschreiten"
+    },
+    "password": {
+      "required": "Passwort ist erforderlich",
+      "tooShort": "Mindestens 8 Zeichen erforderlich",
+      "tooLong": "Passwort darf maximal 64 Zeichen lang sein",
+      "noUppercase": "Mindestens ein Großbuchstabe erforderlich",
+      "noLowercase": "Mindestens ein Kleinbuchstabe erforderlich",
+      "noDigit": "Mindestens eine Ziffer erforderlich",
+      "noSpecialChar": "Mindestens ein Sonderzeichen erforderlich (!@#$%^&*)"
+    },
+    "confirmPassword": {
+      "required": "Bitte bestätige dein Passwort",
+      "mismatch": "Passwörter stimmen nicht überein"
+    }
+  },
+  "task_validation": {
+    "title": {
+      "required": "Aufgabentitel ist erforderlich",
+      "tooShort": "Mindestens 3 Zeichen",
+      "tooLong": "Zu lang – maximal 30 Zeichen"
+    },
+    "description": {
+      "tooLong": "Maximal 70 Zeichen"
+    },
+    "date": {
+      "past": "Datum darf nicht in der Vergangenheit liegen"
+    },
+    "priority": {
+      "required": "Wähle eine Priorität aus"
+    }
   }
 }

@@ -99,5 +99,41 @@
       "on_completing_done": "Task completed!",
       "on_log_out": "Logged out successfully"
     }
+  },
+  "auth_validating": {
+    "email": {
+      "required": "Email is required",
+      "invalid": "Please enter a valid email address",
+      "tooLong": "Email must not exceed 100 characters"
+    },
+    "password": {
+      "required": "Password is required",
+      "tooShort": "Password must be at least 8 characters",
+      "tooLong": "Password must not exceed 64 characters",
+      "noUppercase": "Password must contain at least one uppercase letter",
+      "noLowercase": "Password must contain at least one lowercase letter",
+      "noDigit": "Password must contain at least one digit",
+      "noSpecialChar": "Password must contain at least one special character (!@#$%^&*)"
+    },
+    "confirmPassword": {
+      "required": "Please confirm your password",
+      "mismatch": "Passwords do not match"
+    }
+  },
+  "task_validation": {
+    "title": {
+      "required": "Task name is required",
+      "tooShort": "At least 3 characters",
+      "tooLong": "Too long — max 30 characters"
+    },
+    "description": {
+      "tooLong": "Max 70 characters"
+    },
+    "date": {
+      "past": "Date cannot be in the past"
+    },
+    "priority": {
+      "required": "Select a priority"
+    }
   }
 }
