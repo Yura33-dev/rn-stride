@@ -1,3 +1,3 @@
-import { fetchTasksForWeek, updateTaskStatus } from './task.service';
+import { taskService } from './task.service';
 
-export { fetchTasksForWeek, updateTaskStatus };
+export { taskService };
