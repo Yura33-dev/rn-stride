@@ -194,9 +194,7 @@ export default function AddTaskModalScreen() {
             onPress={handleSubmit(onSubmit)}
             isSubmitting={isSubmitting}
             disabled={isSubmitting || !!errors.title}
-            title={
-              isEditing ? t('modals.task_modal.save_button') : t('modals.task_modal.create_button')
-            }
+            title={isEditing ? t('ui_texts.save_button') : t('ui_texts.create_button')}
             className={cn('mt-10')}
           />
         </View>

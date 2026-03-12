@@ -45,8 +45,6 @@
       "schedule_date": "Date",
       "schedule_time": "Time",
       "schedule_repeatable": "Repeat",
-      "save_button": "Save",
-      "create_button": "Create",
       "repeat_options": {
         "days": "Daily",
         "work_days": "Weekdays",
@@ -73,6 +71,8 @@
     "error": "Loading error. Try again",
     "cancel_button": "Cancel",
     "confirm_button": "OK",
+    "save_button": "Save",
+    "create_button": "Create",
     "completed_tasks": "Completed",
     "active_tasks": "Active Tasks",
     "no_active_tasks": "No active tasks",

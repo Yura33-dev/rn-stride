@@ -45,8 +45,6 @@
       "schedule_date": "Datum",
       "schedule_time": "Uhrzeit",
       "schedule_repeatable": "Wiederholen",
-      "save_button": "Speichern",
-      "create_button": "Erstellen",
       "repeat_options": {
         "days": "Täglich",
         "work_days": "Werktags",
@@ -74,6 +72,8 @@
     "cancel_button": "Abbrechen",
     "confirm_button": "OK",
     "completed_tasks": "Erledigt",
+    "save_button": "Speichern",
+    "create_button": "Erstellen",
     "active_tasks": "Aktuelle Aufgaben",
     "no_active_tasks": "Keine aktiven Aufgaben",
     "no_more_tasks": "Keine Aufgaben für diesen Tag",

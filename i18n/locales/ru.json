@@ -45,8 +45,6 @@
       "schedule_date": "Дата",
       "schedule_time": "Время",
       "schedule_repeatable": "Повтор",
-      "save_button": "Сохранить",
-      "create_button": "Создать",
       "repeat_options": {
         "days": "Ежедневно",
         "work_days": "По будням",
@@ -73,6 +71,8 @@
     "error": "Ошибка загрузки. Повторите",
     "cancel_button": "Отмена",
     "confirm_button": "ОК",
+    "save_button": "Сохранить",
+    "create_button": "Создать",
     "completed_tasks": "Завершено",
     "active_tasks": "Текущие задачи",
     "no_active_tasks": "Активных задач нет",
