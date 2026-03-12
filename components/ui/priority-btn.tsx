@@ -1,3 +1,4 @@
+import { ITask } from '@/types/interfaces';
 import { useEffect } from 'react';
 import { Pressable } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
@@ -6,7 +7,7 @@ const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 interface IPriorityButtonPros {
   priority: {
-    value: 'low' | 'medium' | 'high';
+    value: ITask['repeatable'];
     label: string;
     color: string;
   };
