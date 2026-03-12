@@ -1,0 +1,103 @@
+{
+  "authenticate": {
+    "header_signin": "Willkommen zurück",
+    "subheader_signin": "Melden Sie sich an, um Ihre Aufgaben zu verwalten",
+    "header_signup": "Konto erstellen",
+    "subheader_signup": "Werden Sie Mitglied, um Ihren Alltag effizienter zu gestalten",
+    "form": {
+      "email_input_label": "E-Mail-Adresse",
+      "password_input_label": "Passwort",
+      "password_input_placeholder": "Passwort eingeben",
+      "confirm_input_label": "Passwort bestätigen",
+      "confirm_input_placeholder": "Passwort erneut eingeben",
+      "submit_btn_signin": "Anmelden",
+      "submit_btn_signup": "Registrieren"
+    },
+    "suggest_to_signup": "Noch kein Konto?",
+    "suggest_to_signin": "Bereits registriert?",
+    "toast": {
+      "success_login": "Erfolgreich angemeldet",
+      "profile_created": "Konto wurde erstellt",
+      "inv_credential": "E-Mail oder Passwort falsch",
+      "inv_email": "E-Mail-Adresse ist ungültig",
+      "wrong_password": "Passwort ist falsch",
+      "not_found": "Benutzer nicht gefunden",
+      "many_requests": "Zu viele Versuche. Später erneut versuchen",
+      "error": "Fehler: {{ errorMessage }}",
+      "general_error": "Ein Fehler ist aufgetreten"
+    }
+  },
+  "tabs": {
+    "tab_tasks": "Aufgaben",
+    "tab_settings": "Einstellungen"
+  },
+  "modals": {
+    "calendar": "Kalender",
+    "task_modal": {
+      "add_modal": "Aufgabe hinzufügen",
+      "edit_modal": "Aufgabe bearbeiten",
+      "input_name_label": "Titel",
+      "input_name_placeholder": "z. B. Katze füttern",
+      "input_desc_label": "Beschreibung",
+      "input_desc_placeholder": "Details hinzufügen...",
+      "modal_section_schedule": "Zeitplan",
+      "modal_section_priority": "Priorität",
+      "schedule_date": "Datum",
+      "schedule_time": "Uhrzeit",
+      "schedule_repeatable": "Wiederholen",
+      "save_button": "Speichern",
+      "create_button": "Erstellen",
+      "repeat_options": {
+        "days": "Täglich",
+        "work_days": "Werktags",
+        "weeks": "Jeden {{ weekDay }}",
+        "months": "Monatlich am {{ day }}.",
+        "years": "Jährlich am {{ dateAndMonth }}"
+      }
+    }
+  },
+  "screens": {
+    "weekly_overview": {
+      "header": "Wochenübersicht",
+      "subheader": "Wochenplan"
+    },
+    "settings": {
+      "header": "Einstellungen",
+      "logout_btn": "Abmelden"
+    }
+  },
+  "ui_texts": {
+    "tasks": "Aufgaben",
+    "no_tasks": "Keine Aufgaben geplant",
+    "today": "Heute",
+    "error": "Fehler beim Laden. Erneut versuchen",
+    "cancel_button": "Abbrechen",
+    "confirm_button": "OK",
+    "completed_tasks": "Erledigt",
+    "active_tasks": "Aktuelle Aufgaben",
+    "no_active_tasks": "Keine aktiven Aufgaben",
+    "no_more_tasks": "Keine Aufgaben für diesen Tag",
+    "for_sure_header": "Sind Sie sicher?",
+    "on_delete_task": {
+      "text": "Möchten Sie diese Aufgabe löschen: {{ title }}?"
+    },
+    "on_logout": {
+      "text": "Möchten Sie sich wirklich abmelden?"
+    },
+    "toast": {
+      "ok_title": "Fertig!",
+      "nice_title": "Super!",
+      "on_creating": "Aufgabe wird erstellt...",
+      "on_creating_done": "Aufgabe erstellt",
+      "on_creating_error": "Fehler beim Erstellen",
+      "on_deleting": "Aufgabe wird gelöscht...",
+      "on_deleting_done": "Aufgabe gelöscht",
+      "on_deleting_error": "Fehler beim Löschen",
+      "on_updating": "Aufgabe wird aktualisiert...",
+      "on_updating_done": "Aufgabe aktualisiert",
+      "on_updating_error": "Fehler beim Aktualisieren",
+      "on_completing_done": "Aufgabe erledigt!",
+      "on_log_out": "Erfolgreich abgemeldet"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "authenticate": {
+    "header_signin": "С возвращением",
+    "subheader_signin": "Войдите, чтобы отслеживать задачи и достигать целей",
+    "header_signup": "Создать аккаунт",
+    "subheader_signup": "Присоединяйтесь, чтобы эффективно управлять делами",
+    "form": {
+      "email_input_label": "Эл. почта",
+      "password_input_label": "Пароль",
+      "password_input_placeholder": "Введите пароль",
+      "confirm_input_label": "Подтвердите пароль",
+      "confirm_input_placeholder": "Введите пароль еще раз",
+      "submit_btn_signin": "Войти",
+      "submit_btn_signup": "Регистрация"
+    },
+    "suggest_to_signup": "Нет аккаунта?",
+    "suggest_to_signin": "Уже есть аккаунт?",
+    "toast": {
+      "success_login": "Вход выполнен",
+      "profile_created": "Аккаунт создан",
+      "inv_credential": "Неверная почта или пароль",
+      "inv_email": "Некорректный адрес почты",
+      "wrong_password": "Неверный пароль",
+      "not_found": "Пользователь не найден",
+      "many_requests": "Слишком много попыток. Попробуйте позже",
+      "error": "Ошибка: {{ errorMessage }}",
+      "general_error": "Произошла ошибка"
+    }
+  },
+  "tabs": {
+    "tab_tasks": "Задачи",
+    "tab_settings": "Настройки"
+  },
+  "modals": {
+    "calendar": "Календарь",
+    "task_modal": {
+      "add_modal": "Новая задача",
+      "edit_modal": "Изменить задачу",
+      "input_name_label": "Название",
+      "input_name_placeholder": "Напр.: Покормить кота",
+      "input_desc_label": "Описание",
+      "input_desc_placeholder": "Добавьте детали...",
+      "modal_section_schedule": "Расписание",
+      "modal_section_priority": "Приоритет",
+      "schedule_date": "Дата",
+      "schedule_time": "Время",
+      "schedule_repeatable": "Повтор",
+      "save_button": "Сохранить",
+      "create_button": "Создать",
+      "repeat_options": {
+        "days": "Ежедневно",
+        "work_days": "По будням",
+        "weeks": "Каждый(ую) {{ weekDay }}",
+        "months": "Ежемесячно, {{ day }}-го числа",
+        "years": "Ежегодно, {{ dateAndMonth }}"
+      }
+    }
+  },
+  "screens": {
+    "weekly_overview": {
+      "header": "Обзор недели",
+      "subheader": "План на неделю"
+    },
+    "settings": {
+      "header": "Настройки",
+      "logout_btn": "Выйти"
+    }
+  },
+  "ui_texts": {
+    "tasks": "Задачи",
+    "no_tasks": "Задач пока нет",
+    "today": "Сегодня",
+    "error": "Ошибка загрузки. Повторите",
+    "cancel_button": "Отмена",
+    "confirm_button": "ОК",
+    "completed_tasks": "Завершено",
+    "active_tasks": "Текущие задачи",
+    "no_active_tasks": "Активных задач нет",
+    "no_more_tasks": "На этот день задач нет",
+    "for_sure_header": "Вы уверены?",
+    "on_delete_task": {
+      "text": "Удалить задачу: {{ title }}?"
+    },
+    "on_logout": {
+      "text": "Вы действительно хотите выйти?"
+    },
+    "toast": {
+      "ok_title": "Готово!",
+      "nice_title": "Отлично!",
+      "on_creating": "Создание...",
+      "on_creating_done": "Задача создана",
+      "on_creating_error": "Ошибка при создании",
+      "on_deleting": "Удаление...",
+      "on_deleting_done": "Задача удалена",
+      "on_deleting_error": "Не удалось удалить",
+      "on_updating": "Обновление...",
+      "on_updating_done": "Задача обновлена",
+      "on_updating_error": "Ошибка обновления",
+      "on_completing_done": "Задача выполнена!",
+      "on_log_out": "Вы успешно вышли"
+    }
+  }
+}

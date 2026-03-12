@@ -1,0 +1,103 @@
+{
+  "authenticate": {
+    "header_signin": "Welcome Back",
+    "subheader_signin": "Sign in to track your tasks and reach your goals",
+    "header_signup": "Create Account",
+    "subheader_signup": "Join us to manage your daily tasks efficiently",
+    "form": {
+      "email_input_label": "Email address",
+      "password_input_label": "Password",
+      "password_input_placeholder": "Enter your password",
+      "confirm_input_label": "Confirm password",
+      "confirm_input_placeholder": "Re-enter your password",
+      "submit_btn_signin": "Sign In",
+      "submit_btn_signup": "Sign Up"
+    },
+    "suggest_to_signup": "Don't have an account?",
+    "suggest_to_signin": "Already have an account?",
+    "toast": {
+      "success_login": "Signed in successfully",
+      "profile_created": "Account created",
+      "inv_credential": "Invalid email or password",
+      "inv_email": "Invalid email address",
+      "wrong_password": "Incorrect password",
+      "not_found": "User not found",
+      "many_requests": "Too many requests. Try again later",
+      "error": "Error: {{ errorMessage }}",
+      "general_error": "An error occurred"
+    }
+  },
+  "tabs": {
+    "tab_tasks": "Tasks",
+    "tab_settings": "Settings"
+  },
+  "modals": {
+    "calendar": "Calendar",
+    "task_modal": {
+      "add_modal": "Add Task",
+      "edit_modal": "Edit Task",
+      "input_name_label": "Task Name",
+      "input_name_placeholder": "e.g. Feed the cat",
+      "input_desc_label": "Description",
+      "input_desc_placeholder": "Add more details...",
+      "modal_section_schedule": "Schedule",
+      "modal_section_priority": "Priority",
+      "schedule_date": "Date",
+      "schedule_time": "Time",
+      "schedule_repeatable": "Repeat",
+      "save_button": "Save",
+      "create_button": "Create",
+      "repeat_options": {
+        "days": "Daily",
+        "work_days": "Weekdays",
+        "weeks": "Every {{ weekDay }}",
+        "months": "Monthly on the {{ day }}",
+        "years": "Yearly on {{ dateAndMonth }}"
+      }
+    }
+  },
+  "screens": {
+    "weekly_overview": {
+      "header": "Weekly Overview",
+      "subheader": "Weekly Breakdown"
+    },
+    "settings": {
+      "header": "App Settings",
+      "logout_btn": "Log Out"
+    }
+  },
+  "ui_texts": {
+    "tasks": "Tasks",
+    "no_tasks": "No tasks scheduled",
+    "today": "Today",
+    "error": "Loading error. Try again",
+    "cancel_button": "Cancel",
+    "confirm_button": "OK",
+    "completed_tasks": "Completed",
+    "active_tasks": "Active Tasks",
+    "no_active_tasks": "No active tasks",
+    "no_more_tasks": "No tasks for this day",
+    "for_sure_header": "Are you sure?",
+    "on_delete_task": {
+      "text": "Are you sure you want to delete: {{ title }}?"
+    },
+    "on_logout": {
+      "text": "Are you sure you want to log out?"
+    },
+    "toast": {
+      "ok_title": "Done!",
+      "nice_title": "Nice!",
+      "on_creating": "Creating task...",
+      "on_creating_done": "Task created",
+      "on_creating_error": "Oops! Could not create task",
+      "on_deleting": "Deleting task...",
+      "on_deleting_done": "Task deleted",
+      "on_deleting_error": "Oops! Could not delete task",
+      "on_updating": "Updating task...",
+      "on_updating_done": "Task updated",
+      "on_updating_error": "Oops! Could not update task",
+      "on_completing_done": "Task completed!",
+      "on_log_out": "Logged out successfully"
+    }
+  }
+}
