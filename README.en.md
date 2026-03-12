@@ -1,6 +1,6 @@
 # STRIDE — Task Tracker & Time Management
 
-> 📖 **Documentation:** [Deutsch](README.md) (Default) | [English](README.en.md)
+> 📖 **Documentation:** [Deutsch](README.md) | [English](README.en.md)
 
 ---
 
@@ -32,21 +32,21 @@ STRIDE helps you plan your day and week: tasks are linked to dates and times, re
 
 ## Technology Stack
 
-| Category | Technologies |
-|----------|--------------|
-| **Framework** | React Native + Expo (SDK 54) |
-| **Navigation** | Expo Router v6 (file-based routing) |
-| **Language** | TypeScript |
-| **Styling** | NativeWind (Tailwind for React Native) |
-| **Backend** | Firebase (Auth, Firestore) |
-| **Server State** | TanStack React Query v5 |
-| **Client State** | Zustand |
-| **Forms & Validation** | React Hook Form + Zod + @hookform/resolvers |
-| **Internationalisation** | i18next + react-i18next + expo-localization |
-| **Date/Time** | date-fns |
-| **Animations** | react-native-reanimated, react-native-gesture-handler |
-| **UI Toasts** | sonner-native |
-| **Calendar** | react-native-calendars |
+| Category                 | Technologies                                          |
+| ------------------------ | ----------------------------------------------------- |
+| **Framework**            | React Native + Expo (SDK 54)                          |
+| **Navigation**           | Expo Router v6 (file-based routing)                   |
+| **Language**             | TypeScript                                            |
+| **Styling**              | NativeWind (Tailwind for React Native)                |
+| **Backend**              | Firebase (Auth, Firestore)                            |
+| **Server State**         | TanStack React Query v5                               |
+| **Client State**         | Zustand                                               |
+| **Forms & Validation**   | React Hook Form + Zod + @hookform/resolvers           |
+| **Internationalisation** | i18next + react-i18next + expo-localization           |
+| **Date/Time**            | date-fns                                              |
+| **Animations**           | react-native-reanimated, react-native-gesture-handler |
+| **UI Toasts**            | sonner-native                                         |
+| **Calendar**             | react-native-calendars                                |
 
 ---
 
@@ -134,7 +134,6 @@ APP_ID=...
 npm start        # Expo dev server
 npm run android  # Android
 npm run ios      # iOS
-npm run web      # Web
 ```
 
 ---
@@ -152,12 +151,11 @@ npm run web      # Web
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm start` | Start Expo dev server |
-| `npm run android` | Run on Android |
-| `npm run ios` | Run on iOS |
-| `npm run web` | Run web version |
+| Command           | Description           |
+| ----------------- | --------------------- |
+| `npm start`       | Start Expo dev server |
+| `npm run android` | Run on Android        |
+| `npm run ios`     | Run on iOS            |
 
 ---
 
