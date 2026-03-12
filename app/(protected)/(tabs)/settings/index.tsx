@@ -27,7 +27,7 @@ export default function SettingsScreen() {
             await signOut(auth);
             toast.info(t('ui_texts.toast.on_log_out'));
           } catch (error) {
-            console.log(error);
+            console.error(error);
           } finally {
             setIsSubmitting(false);
           }

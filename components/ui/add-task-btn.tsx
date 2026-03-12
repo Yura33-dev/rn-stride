@@ -17,7 +17,11 @@ export default function AddTaskButton() {
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ scale: interpolate(pressed.value, [0, 1], [1, 0.9]) }],
-    backgroundColor: interpolateColor(pressed.value, [0, 1], [Colors.primary, Colors.primaryActiv]),
+    backgroundColor: interpolateColor(
+      pressed.value,
+      [0, 1],
+      [Colors.primary, Colors.primaryActive],
+    ),
   }));
 
   return (
