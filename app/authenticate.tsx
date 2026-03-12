@@ -4,7 +4,7 @@ import ScrollViewContainer from '@/components/ui/scroll-view-container';
 import SubmitButton from '@/components/ui/submit-btn';
 import { auth } from '@/config/firebaseConfig';
 import Colors from '@/constants/Colors';
-import { authorizationSchema, registrationSchema } from '@/schemas';
+import { getAuthorizationSchema, getRegistrationSchema } from '@/schemas';
 import { AuthFormData } from '@/types';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -37,7 +37,7 @@ export default function AuthScreen() {
     formState: { errors },
     reset,
   } = useForm<AuthFormData>({
-    resolver: zodResolver(isSignIn ? authorizationSchema : registrationSchema),
+    resolver: zodResolver(isSignIn ? getAuthorizationSchema(t) : getRegistrationSchema(t)),
     mode: 'onBlur',
     defaultValues: {
       email: '',

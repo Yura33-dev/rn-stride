@@ -5,7 +5,7 @@ import TimePicker from '@/components/time-picker';
 import ControlledTextInput from '@/components/ui/controlled-text-input';
 import SubmitButton from '@/components/ui/submit-btn';
 import { useCreateTask, useLanguage, useTask, useUpdateTask } from '@/hooks';
-import { taskSchema } from '@/schemas';
+import { getTaskSchema } from '@/schemas';
 import { TaskFormData } from '@/types';
 import { cn, combineDateAndTime } from '@/utilities';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -71,7 +71,7 @@ export default function AddTaskModalScreen() {
     setValue,
     reset,
   } = useForm<TaskFormData>({
-    resolver: zodResolver(taskSchema),
+    resolver: zodResolver(getTaskSchema(t)),
     mode: 'onBlur',
     defaultValues: {
       title: task?.title ?? '',

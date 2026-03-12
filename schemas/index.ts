@@ -1,4 +1,4 @@
-import { authorizationSchema, registrationSchema } from './auth.schema';
-import { taskSchema } from './task-schema';
+import { getAuthorizationSchema, getRegistrationSchema } from './auth.schema';
+import { getTaskSchema } from './task-schema';
 
-export { authorizationSchema, registrationSchema, taskSchema };
+export { getAuthorizationSchema, getRegistrationSchema, getTaskSchema };
