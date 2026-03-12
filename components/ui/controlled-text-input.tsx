@@ -62,7 +62,7 @@ export default function ControlledTextInput<T extends FieldValues>({
                 errors?.[name] ? 'border-red-500' : 'border-gray-600',
               )}
               placeholder={placeholder}
-              placeholderTextColor={Colors.placehodler}
+              placeholderTextColor={Colors.placeholder}
               value={value}
               onChangeText={onChange}
               onBlur={onBlur}
