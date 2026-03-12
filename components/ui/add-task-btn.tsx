@@ -21,7 +21,7 @@ export default function AddTaskButton() {
   }));
 
   return (
-    <Link href="/(tabs)/(tasks)/modal-add-task" asChild push>
+    <Link href="/(protected)/(tabs)/(tasks)/modal-task" asChild push>
       <AnimatedPressable
         style={animatedStyle}
         className="w-20 h-20 mb-2 justify-center items-center absolute bottom-0 self-center bg-primary rounded-full"

@@ -1,6 +1,7 @@
 import Colors from '@/constants/Colors';
 import { cn } from '@/utilities';
-import { ActivityIndicator, Pressable, Text } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 import Animated, {
   interpolate,
   interpolateColor,
@@ -28,6 +29,7 @@ export default function SubmitButton({
   isSubmitting = false,
   disabled = false,
 }: ISubmitButtonProps) {
+  const { t } = useTranslation();
   const pressed = useSharedValue(0);
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -39,7 +41,11 @@ export default function SubmitButton({
     <AnimatedPressable
       style={animatedStyle}
       onPress={onPress}
-      className={cn(className && className)}
+      className={cn(
+        'mt-4 p-4 rounded-xl items-center justify-center',
+        isSubmitting ? 'bg-blue-800' : 'bg-blue-600',
+        className && className,
+      )}
       onPressIn={() => {
         pressed.value = withSpring(1);
       }}
@@ -51,7 +57,11 @@ export default function SubmitButton({
       {isSubmitting ? (
         <ActivityIndicator color="white" />
       ) : (
-        <Text className={textClassName && textClassName}>{title ? title : 'Save'}</Text>
+        <View className="justify-center items-center gap-3">
+          <Text className={cn('text-white font-bold text-base', textClassName && textClassName)}>
+            {title ? title : t('ui_texts.save_button')}
+          </Text>
+        </View>
       )}
     </AnimatedPressable>
   );

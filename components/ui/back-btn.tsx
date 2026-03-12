@@ -1,6 +1,7 @@
 import { cn } from '@/utilities';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useNavigation } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 import { Pressable, Text } from 'react-native';
 import Animated, {
   interpolate,
@@ -18,11 +19,12 @@ interface IBackButtonProps {
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 export default function BackButton({
-  title = 'Cancel',
+  title,
   onlyIcon = false,
   className = null,
 }: IBackButtonProps) {
   const router = useNavigation();
+  const { t } = useTranslation();
 
   const pressed = useSharedValue(0);
 
@@ -47,7 +49,9 @@ export default function BackButton({
       }}
     >
       <MaterialIcons name="arrow-back-ios" size={20} color="white" />
-      {!onlyIcon && <Text className="text-lg text-white">{title ? title : 'Cancel'}</Text>}
+      {!onlyIcon && (
+        <Text className="text-lg text-white">{title ? title : t('ui_texts.cancel_button')}</Text>
+      )}
     </AnimatedPressable>
   );
 }
