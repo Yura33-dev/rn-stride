@@ -1,13 +1,17 @@
 import Colors from '@/constants/Colors';
+import { useLanguage } from '@/hooks';
 import { useWeekStore } from '@/store';
 import { getMarkedDates } from '@/utilities';
 import { addMonths, eachDayOfInterval, endOfWeek, format, startOfWeek } from 'date-fns';
 import { useNavigation } from 'expo-router';
 import { useMemo } from 'react';
 import { Dimensions, FlatList, View } from 'react-native';
-import { Calendar, DateData } from 'react-native-calendars';
+import { Calendar, DateData, LocaleConfig } from 'react-native-calendars';
 
 export default function CalendarModalScreen() {
+  const { currentLanguage } = useLanguage();
+  LocaleConfig.defaultLocale = currentLanguage;
+
   const { selectedWeek, setSelectedWeek } = useWeekStore();
 
   const markedDates = useMemo(() => {
@@ -21,7 +25,7 @@ export default function CalendarModalScreen() {
   const handleDayPress = (day: DateData) => {
     const selected = new Date(day.year, day.month - 1, day.day);
 
-    const start = startOfWeek(selected, { weekStartsOn: 1 }); //from Monday
+    const start = startOfWeek(selected, { weekStartsOn: 1 });
     const end = endOfWeek(selected, { weekStartsOn: 1 });
     const days = eachDayOfInterval({ start, end });
 

@@ -3,8 +3,11 @@ import { Tabs } from 'expo-router';
 import 'react-native-reanimated';
 
 import Colors from '@/constants/Colors';
+import { useTranslation } from 'react-i18next';
 
 export default function BottomTabsLayout() {
+  const { t } = useTranslation();
+
   return (
     <Tabs
       screenOptions={{
@@ -20,7 +23,7 @@ export default function BottomTabsLayout() {
       <Tabs.Screen
         name="(tasks)"
         options={{
-          tabBarLabel: 'Tasks',
+          tabBarLabel: t('tabs.tab_tasks'),
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="checklist" size={size} color={color} />
           ),
@@ -29,7 +32,7 @@ export default function BottomTabsLayout() {
       <Tabs.Screen
         name="settings"
         options={{
-          tabBarLabel: 'Settings',
+          tabBarLabel: t('tabs.tab_settings'),
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="settings" size={size} color={color} />
           ),

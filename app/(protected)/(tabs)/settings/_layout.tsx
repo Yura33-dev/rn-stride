@@ -10,8 +10,7 @@ export default function Layout() {
         contentStyle: { backgroundColor: Colors.background[600] },
       }}
     >
-      <Stack.Screen name="index" options={{ title: 'General settings' }} />
-      <Stack.Screen name="app-settings" options={{ title: 'App settings' }} />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
     </Stack>
   );
 }

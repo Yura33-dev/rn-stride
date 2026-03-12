@@ -1,17 +1,21 @@
+import DailyTaskItem from '@/components/daily-task-item';
 import Header from '@/components/header';
 import Subheader from '@/components/subheader';
-import TaskCard from '@/components/task-card';
 import ViewContainer from '@/components/view-container';
-import { useUpdateTaskStatus, useWeekTasks } from '@/hooks';
+import { dateFnsLocales } from '@/constants';
+import { useLanguage, useUpdateTaskStatus, useWeekTasks } from '@/hooks';
 import { useWeekStore } from '@/store';
 import { format, isSameDay } from 'date-fns';
 import { useLocalSearchParams } from 'expo-router';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Text } from 'react-native';
-import Animated, { FadeIn, FadeOut, LinearTransition } from 'react-native-reanimated';
+import Animated, { LinearTransition } from 'react-native-reanimated';
 
 export default function DayTasksScreen() {
   const { date } = useLocalSearchParams<{ date: string }>();
+  const { t } = useTranslation();
+  const { currentLanguage } = useLanguage();
   const { data: weeksTasks = [] } = useWeekTasks();
 
   const selectedWeek = useWeekStore((state) => state.selectedWeek);
@@ -32,14 +36,12 @@ export default function DayTasksScreen() {
     };
   }, [weeksTasks, date]);
 
-  const onSwitchTaskStatus = (id: string) => {
-    switchStatus(id);
-  };
-
   return (
     <ViewContainer>
-      <Header title="Daily Tasks" withGoBack />
-      <Text className="text-secondary font-medium mt-2 mb-6">{format(date, 'd MMMM, yyyy')}</Text>
+      <Header
+        title={format(date, 'd MMMM, yyyy', { locale: dateFnsLocales[currentLanguage] })}
+        withGoBack
+      />
 
       {sortedTasks.length > 0 ? (
         <Animated.FlatList
@@ -47,27 +49,30 @@ export default function DayTasksScreen() {
           data={sortedTasks}
           keyExtractor={(task) => task.id}
           itemLayoutAnimation={LinearTransition}
+          contentContainerStyle={{ gap: 8 }}
           renderItem={({ item, index }) => (
             <>
               {index === 0 && (
                 <Subheader
-                  title={activeTasks.length === 0 ? 'No active tasks' : 'Active Tasks'}
+                  title={
+                    activeTasks.length === 0
+                      ? t('ui_texts.no_active_tasks')
+                      : t('ui_texts.active_tasks')
+                  }
                   className="mt-8"
                 />
               )}
               {index === activeTasks.length && completedTasks.length > 0 && (
-                <Subheader title="Completed Tasks" className="mt-8" />
+                <Subheader title={t('ui_texts.completed_tasks')} className="mt-8" />
               )}
 
-              <Animated.View entering={FadeIn.duration(500)} exiting={FadeOut.duration(500)}>
-                <TaskCard item={item} onSwitchTaskStatus={onSwitchTaskStatus} />
-              </Animated.View>
+              <DailyTaskItem item={item} switchStatus={switchStatus} />
             </>
           )}
         />
       ) : (
-        <Text className="text-center text-gray-500 text-2xl mt-4">
-          There are no tasks for this day
+        <Text className="text-center text-gray-500 text-xl mt-12">
+          {t('ui_texts.no_more_tasks')}
         </Text>
       )}
     </ViewContainer>

@@ -2,18 +2,20 @@ import AddTaskButton from '@/components/ui/add-task-btn';
 import BackButton from '@/components/ui/back-btn';
 import Colors from '@/constants/Colors';
 import { Stack } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 
 export default function Layout() {
+  const { t } = useTranslation();
   return (
     <View className="flex-1 relative">
       <Stack
         screenOptions={{
           headerTintColor: Colors.foreground,
           headerShadowVisible: false,
+          headerShown: false,
           headerStyle: { backgroundColor: Colors.background[600] },
           contentStyle: { backgroundColor: Colors.background[600] },
-          headerShown: false,
         }}
       >
         <Stack.Screen name="index" />
@@ -24,7 +26,7 @@ export default function Layout() {
           options={{
             presentation: 'formSheet',
             headerShown: true,
-            title: 'Calendar',
+            title: t('modals.calendar'),
             sheetAllowedDetents: [0.6, 1.0],
             sheetInitialDetentIndex: 0,
             sheetGrabberVisible: true,
@@ -32,11 +34,11 @@ export default function Layout() {
         />
 
         <Stack.Screen
-          name="modal-add-task"
+          name="modal-task"
           options={{
             presentation: 'modal',
             headerShown: true,
-            title: 'New Task',
+            title: '',
             headerLeft: (props) => <BackButton />,
           }}
         />
