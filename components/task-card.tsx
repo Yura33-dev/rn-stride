@@ -1,26 +1,38 @@
 import { ITask } from '@/types/interfaces';
 import { cn } from '@/utilities';
-import { format } from 'date-fns';
+import { format, isBefore } from 'date-fns';
 import { Pressable, Text, View } from 'react-native';
+import Animated, { interpolate, SharedValue, useAnimatedStyle } from 'react-native-reanimated';
 import Checkbox from './ui/checkbox';
 
 interface ITaskCardProps {
   item: ITask;
-  onSwitchTaskStatus: (id: string) => void;
+  onSwitchTaskStatus: ({ taskId, completed }: { taskId: string; completed: boolean }) => void;
+  swipeProgress: SharedValue<number>;
 }
 
-export default function TaskCard({ item, onSwitchTaskStatus }: ITaskCardProps) {
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+
+export default function TaskCard({ item, onSwitchTaskStatus, swipeProgress }: ITaskCardProps) {
+  const isOverdue = isBefore(item.scheduledAt, new Date()) && !item.completed;
+
+  const animatedStyle = useAnimatedStyle(() => ({
+    borderTopRightRadius: interpolate(swipeProgress.value, [0, 1], [12, 0]),
+    borderBottomRightRadius: interpolate(swipeProgress.value, [0, 1], [12, 0]),
+  }));
+
   return (
-    <Pressable
+    <AnimatedPressable
       className={cn(
-        'my-2 p-4 bg-blue-700/30 rounded-xl flex-row justify-center items-center gap-4',
+        'p-4 bg-blue-700/30 rounded-xl flex-row justify-center items-center gap-4',
         item.completed && 'bg-gray-700/70',
       )}
+      style={animatedStyle}
     >
       <Checkbox
         checked={item.completed}
         icon={{ name: 'done', size: 24, color: 'gray' }}
-        onPress={() => onSwitchTaskStatus(item.id)}
+        onPress={() => onSwitchTaskStatus({ taskId: item.id, completed: !item.completed })}
       />
 
       <View className="flex-1">
@@ -39,10 +51,11 @@ export default function TaskCard({ item, onSwitchTaskStatus }: ITaskCardProps) {
             className={cn(
               'font-light text-gray-400',
               item.completed && 'text-gray-600 line-through',
+              isOverdue && 'text-red-600 font-semibold',
             )}
           >
             В {format(item.scheduledAt, 'HH:mm') + '. '}
-            {item.description && item.description}
+            {!isOverdue && item.description && item.description}
           </Text>
         </View>
       </View>
@@ -88,6 +101,6 @@ export default function TaskCard({ item, onSwitchTaskStatus }: ITaskCardProps) {
           ></View>
         </View>
       </View>
-    </Pressable>
+    </AnimatedPressable>
   );
 }

@@ -1,6 +1,7 @@
 import { cn } from '@/utilities';
 import { format } from 'date-fns';
 import { useRouter } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 import { Pressable, Text, View } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 
@@ -17,6 +18,7 @@ interface IDayCardProps {
 }
 
 export default function DayCard({ item, today }: IDayCardProps) {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
@@ -37,7 +39,7 @@ export default function DayCard({ item, today }: IDayCardProps) {
       }}
       onPress={() =>
         router.navigate({
-          pathname: '/(tabs)/(tasks)/tasks',
+          pathname: '/(protected)/(tabs)/(tasks)/tasks',
           params: { date: format(item.date, 'yyyy-MM-dd') },
         })
       }
@@ -60,7 +62,9 @@ export default function DayCard({ item, today }: IDayCardProps) {
               item.total === 0 && 'text-blue-300/40',
             )}
           >
-            {item.total > 0 ? `${item.completed} / ${item.total} Tasks` : 'No tasks scheduled'}
+            {item.total > 0
+              ? `${item.completed} / ${item.total} ${t('ui_texts.tasks')}`
+              : t('ui_texts.no_tasks')}
           </Text>
         </View>
 
@@ -77,7 +81,9 @@ export default function DayCard({ item, today }: IDayCardProps) {
 
         {today && (
           <View className="absolute -top-[30%] left-5 px-3 py-1.5 bg-primary rounded-lg">
-            <Text className="font-bold text-[10px] uppercase text-white">today</Text>
+            <Text className="font-bold text-[10px] uppercase text-white">
+              {t('ui_texts.today')}
+            </Text>
           </View>
         )}
       </View>

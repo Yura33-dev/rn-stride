@@ -7,7 +7,7 @@ const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 interface IPriorityButtonPros {
   priority: {
-    value: ITask['repeatable'];
+    value: ITask['priority'];
     label: string;
     color: string;
   };
