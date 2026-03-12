@@ -1,6 +1,6 @@
 {
   "authenticate": {
-    "header_signin": "Willkommen zurück",
+    "header_signin": "Willkommen zurück in Stride!",
     "subheader_signin": "Melden Sie sich an, um Ihre Aufgaben zu verwalten",
     "header_signup": "Konto erstellen",
     "subheader_signup": "Werden Sie Mitglied, um Ihren Alltag effizienter zu gestalten",

@@ -1,6 +1,6 @@
 {
   "authenticate": {
-    "header_signin": "С возвращением",
+    "header_signin": "С возвращением в Stride!",
     "subheader_signin": "Войдите, чтобы отслеживать задачи и достигать целей",
     "header_signup": "Создать аккаунт",
     "subheader_signup": "Присоединяйтесь, чтобы эффективно управлять делами",

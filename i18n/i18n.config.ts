@@ -130,7 +130,7 @@ const languageDetector: any = {
       const locale = Localization.getLocales()[0].languageCode;
       callback(locale || 'en');
     } catch (error) {
-      console.log('Error reading language', error);
+      console.error('Error reading language', error);
       callback('en');
     }
   },
@@ -138,7 +138,7 @@ const languageDetector: any = {
     try {
       await AsyncStorage.setItem(STORE_LANGUAGE_KEY, language);
     } catch (error) {
-      console.log('Error saving language', error);
+      console.error('Error saving language', error);
     }
   },
 };
