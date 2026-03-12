@@ -1,0 +1,61 @@
+diff --git a/node_modules/react-native-gesture-handler/src/components/ReanimatedSwipeable/ReanimatedSwipeable.tsx b/node_modules/react-native-gesture-handler/src/components/ReanimatedSwipeable/ReanimatedSwipeable.tsx
+index a1c840e..d11fa89 100644
+--- a/node_modules/react-native-gesture-handler/src/components/ReanimatedSwipeable/ReanimatedSwipeable.tsx
++++ b/node_modules/react-native-gesture-handler/src/components/ReanimatedSwipeable/ReanimatedSwipeable.tsx
+@@ -1,27 +1,22 @@
+ import {
+-  useMemo,
++  ForwardedRef,
+   useCallback,
+   useImperativeHandle,
+-  ForwardedRef,
++  useMemo,
+   useState,
+ } from 'react';
+-import { LayoutChangeEvent, View, I18nManager, StyleSheet } from 'react-native';
++import { I18nManager, LayoutChangeEvent, StyleSheet, View } from 'react-native';
+ import Animated, {
+-  useSharedValue,
+   interpolate,
+-  runOnJS,
+-  ReduceMotion,
+-  withSpring,
+-  useAnimatedRef,
+   measure,
++  ReduceMotion,
++  runOnJS,
+   runOnUI,
++  useAnimatedRef,
+   useAnimatedStyle,
++  useSharedValue,
++  withSpring,
+ } from 'react-native-reanimated';
+-import {
+-  SwipeableProps,
+-  SwipeableMethods,
+-  SwipeDirection,
+-} from './ReanimatedSwipeableProps';
+ import { Gesture } from '../..';
+ import {
+   GestureStateChangeEvent,
+@@ -34,6 +29,11 @@ import {
+   RelationPropName,
+   RelationPropType,
+ } from '../utils';
++import {
++  SwipeableMethods,
++  SwipeableProps,
++  SwipeDirection,
++} from './ReanimatedSwipeableProps';
+ 
+ const DRAG_TOSS = 0.05;
+ 
+@@ -401,7 +401,7 @@ const Swipeable = (props: SwipeableProps) => {
+ 
+   const rightActionAnimation = useAnimatedStyle(() => {
+     return {
+-      opacity: showRightProgress.value === 0 ? 0 : 1,
++      opacity: 1
+     };
+   });
+ 
