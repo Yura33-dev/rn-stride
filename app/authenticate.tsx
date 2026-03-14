@@ -115,7 +115,7 @@ export default function AuthScreen() {
               )}
             </View>
 
-            <Text className="font-bold text-3xl text-white mb-3">
+            <Text className="font-bold text-3xl text-white mb-3 text-center">
               {isSignIn ? t('authenticate.header_signin') : t('authenticate.header_signup')}
             </Text>
 

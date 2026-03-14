@@ -1,6 +1,7 @@
 import { ITask } from '@/types/interfaces';
 import { cn } from '@/utilities';
 import { format, isBefore } from 'date-fns';
+import { useTranslation } from 'react-i18next';
 import { Pressable, Text, View } from 'react-native';
 import Animated, { interpolate, SharedValue, useAnimatedStyle } from 'react-native-reanimated';
 import Checkbox from './ui/checkbox';
@@ -14,6 +15,7 @@ interface ITaskCardProps {
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 export default function TaskCard({ item, onSwitchTaskStatus, swipeProgress }: ITaskCardProps) {
+  const { t } = useTranslation();
   const isOverdue = isBefore(item.scheduledAt, new Date()) && !item.completed;
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -54,7 +56,7 @@ export default function TaskCard({ item, onSwitchTaskStatus, swipeProgress }: IT
               isOverdue && 'text-red-600 font-semibold',
             )}
           >
-            В {format(item.scheduledAt, 'HH:mm') + '. '}
+            {t('ui_texts.at_time', { time: format(item.scheduledAt, 'HH:mm') })}
             {!isOverdue && item.description && item.description}
           </Text>
         </View>

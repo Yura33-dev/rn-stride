@@ -65,6 +65,7 @@
     }
   },
   "ui_texts": {
+    "at_time": "At {{ time }}. ",
     "tasks": "Tasks",
     "no_tasks": "No tasks scheduled",
     "today": "Today",

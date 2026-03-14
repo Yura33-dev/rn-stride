@@ -65,6 +65,7 @@
     }
   },
   "ui_texts": {
+    "at_time": "Um {{ time }}. ",
     "tasks": "Aufgaben",
     "no_tasks": "Keine Aufgaben geplant",
     "today": "Heute",
