@@ -14,6 +14,36 @@ STRIDE helps you plan your day and week: tasks are linked to dates and times, re
 
 ---
 
+## Demonstration
+
+### Video Overview
+[🎬 Watch the Video Demo](assets/demo/video/stride.mp4)
+
+### Screenshots
+<details>
+  <summary>Click to view screenshots (16 images)</summary>
+  <p align="center">
+    <img src="assets/demo/screens/signup.PNG" width="24%" />
+    <img src="assets/demo/screens/signin.PNG" width="24%" />
+    <img src="assets/demo/screens/1.PNG" width="24%" />
+    <img src="assets/demo/screens/2.PNG" width="24%" />
+    <img src="assets/demo/screens/3.PNG" width="24%" />
+    <img src="assets/demo/screens/4.PNG" width="24%" />
+    <img src="assets/demo/screens/5.PNG" width="24%" />
+    <img src="assets/demo/screens/6.PNG" width="24%" />
+    <img src="assets/demo/screens/7.PNG" width="24%" />
+    <img src="assets/demo/screens/8.PNG" width="24%" />
+    <img src="assets/demo/screens/9.PNG" width="24%" />
+    <img src="assets/demo/screens/10.PNG" width="24%" />
+    <img src="assets/demo/screens/11.PNG" width="24%" />
+    <img src="assets/demo/screens/12.PNG" width="24%" />
+    <img src="assets/demo/screens/13.PNG" width="24%" />
+    <img src="assets/demo/screens/14.PNG" width="24%" />
+  </p>
+</details>
+
+---
+
 ## Features
 
 - **Task management** — Create, edit, delete
