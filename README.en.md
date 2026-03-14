@@ -17,7 +17,7 @@ STRIDE helps you plan your day and week: tasks are linked to dates and times, re
 ## Demonstration
 
 ### Video Overview
-[🎬 Watch the Video Demo](assets/demo/video/stride.mp4)
+[🎬 Watch the Video Demo](https://github.com/user-attachments/assets/538492fc-ef4c-467a-9edf-20b6d1bb758c)
 
 ### Screenshots
 <details>

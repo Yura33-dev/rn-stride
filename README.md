@@ -17,7 +17,7 @@ STRIDE unterstützt bei der Planung von Tag und Woche: Aufgaben werden Datum und
 ## Demonstration
 
 ### Video-Übersicht
-[🎬 Video-Demo ansehen](assets/demo/video/stride.mp4)
+[🎬 Video-Demo ansehen](https://github.com/user-attachments/assets/538492fc-ef4c-467a-9edf-20b6d1bb758c)
 
 ### Screenshots
 <details>
